@@ -1,3 +1,95 @@
 @import './reset.css';
 @import './base.css';
 
+.app-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr minmax(40px, auto);
+  min-height: 100vh;
+}
+.app-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0;
+  background-image: linear-gradient(25deg, #02fdb6bf 0%, #02f1fdba 100%);
+}
+.app-title {
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: .1em;
+  color: #444;
+}
+.app-btn {
+  width: 150px;
+  border-radius: 2px;
+  line-height: 2rem;
+  background-color: #0241fd8c;
+  color: #eef;
+  text-transform: uppercase;
+}
+.app-btn:hover {
+  background-color: #0241fd;
+}
+.app-btn--start {
+  margin-top: 1rem;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.todo {
+  max-width: 32rem;
+  width: 100%;
+}
+.todo__title {
+  width: fit-content;
+  margin: 0 auto;
+}
+.todo__list {
+  margin-top: 1.25rem;
+}
+.todo__item {
+  border: 1px solid #014;
+  padding: 0.5rem;
+}
+.todo__item + .todo__item {
+  margin-top: 1rem;
+}
+.todo__text {
+  color: #014;
+}
+.todo__controls {
+  padding-top: 0.5rem;
+  display: grid;
+  gap: 0.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.todo__add-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.todo__item--done {
+  background-color: #4f0;
+}
+.todo__item--done .todo__text {
+  opacity: 0.5;
+}
+.todo__item--done .todo__done-btn {
+  display: none;
+}
+
+
+.app-footer {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #0241fd8c;
+  font-weight: 700;
+  color: #af0;
+  text-align: center;
+}
