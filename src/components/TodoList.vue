@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <div class="todo">
-      <h2 class="app-title todo__title">Список завдань</h2>
+      <h1 class="app-title todo__title">Список завдань</h1>
       <ul class="todo__list">
         <li v-for="task of todoList" :key="task.id" :class="{ 'todo__item--done': task.done }" class="todo__item ">
           <h2>
-            {{ task.id }}
+            #{{ task.id }}
             <img v-if="task.done" width="15" height="15" src="done.png" alt="Done">
           </h2>
           <h3 class="todo__text">{{ task.text }}</h3>
@@ -13,8 +13,7 @@
             <button @click="editCurrentTask(task.id)" class="app-btn todo__done-btn" type="button">змінити</button>
             <button @click="deleteCurrentTask(task)" class="app-btn" type="button">видалити</button>
             <button @click="markTaskDone(task)" class="app-btn todo__done-btn app-btn--status"
-              type="button">статус<span>відмітити як
-                "виконано"</span></button>
+              type="button">статус<span>відмітити як "виконано"</span></button>
           </div>
         </li>
       </ul>
@@ -24,7 +23,9 @@
 </template>
 
 <script>
+
 export default {
+
   props: {
     todoList: Array
   },
@@ -38,9 +39,6 @@ export default {
   data() {
     return {
     }
-  },
-
-  computed: {
   },
 
   methods: {
@@ -58,7 +56,6 @@ export default {
     }
   },
 
-  mounted() {
-  }
 }
+
 </script>
