@@ -21,7 +21,7 @@
   font-size: 2rem;
   line-height: 1.2;
   letter-spacing: .1em;
-  color: #444;
+  color: var(--title_color);
 }
 .app-btn {
   width: 150px;
@@ -30,6 +30,9 @@
   background-color: #0241fd8c;
   color: #eef;
   text-transform: uppercase;
+  margin: 0 auto;
+  transition: background-color 0.4s;
+  position: relative;
 }
 .app-btn:hover {
   background-color: #0241fd;
@@ -54,14 +57,14 @@
   margin-top: 1.25rem;
 }
 .todo__item {
-  border: 1px solid #014;
+  border: 1px solid var(--text_color);
   padding: 0.5rem;
 }
 .todo__item + .todo__item {
   margin-top: 1rem;
 }
 .todo__text {
-  color: #014;
+  color: var(--text_color);
 }
 .todo__controls {
   padding-top: 0.5rem;
@@ -75,7 +78,7 @@
 }
 
 .todo__item--done {
-  background-color: #4f0;
+  background-color: #0fe;
 }
 .todo__item--done .todo__text {
   opacity: 0.5;
@@ -93,3 +96,54 @@
   color: #af0;
   text-align: center;
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000aa;
+  z-index: 11;
+
+  /* display: none; */
+}
+.modal__body {
+  max-width: 700px;
+  width: 90%;
+  padding: 1rem;
+  border-radius: 3px;
+  background-color: #fff;
+  overflow: auto;
+}
+.modal__message {
+  margin-bottom: 0.7rem;
+  text-align: center;
+  color: var(--title_color);
+}
+.modal__message--unvalid {
+  color:brown;
+}
+.modal__input {
+  width: 100%;
+  border: 1px solid var(--text_color);
+  font-size: 18px;
+}
+.app-btn--status span {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  background-color: #fff;
+  color: #014;
+  line-height: 1.1;
+  visibility: hidden;
+  transition: visibility 0.2s;
+}
+.app-btn--status:hover span {
+  visibility: visible;
+}
+

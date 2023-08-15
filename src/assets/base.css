@@ -1,5 +1,7 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
+  --title_color: #444;
+  --text_color: #014;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap');
@@ -15,10 +17,20 @@ html {
   margin: 0;
   font-weight: normal;
 }
+*:focus {
+  outline: thick double green;
+  border-color: transparent;
+}
 
 
 body {
   font-family: 'Roboto Slab', serif;
   font-size: 14px;
   font-weight: 400;
+  background-color: #f88;
 }
+
+.noscroll {
+  overflow: hidden;
+}
+
