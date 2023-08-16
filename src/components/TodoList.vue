@@ -6,7 +6,7 @@
         <li v-for="task of todoList" :key="task.id" :class="{ 'todo__item--done': task.done }" class="todo__item ">
           <h2>
             #{{ task.id }}
-            <img v-if="task.done" width="15" height="15" src="done.png" alt="Done">
+            <img v-if="task.done" width="15" height="15" src="/done.png" alt="Done">
           </h2>
           <h3 class="todo__text">{{ task.text }}</h3>
           <div class="todo__controls">
