@@ -16,7 +16,6 @@
   width: 100%;
   height: 100%;
   padding: 1rem 0;
-  background-image: linear-gradient(25deg, #02fdb6bf 0%, #02f1fdba 100%);
 }
 .app-title {
   font-size: 2rem;
@@ -79,7 +78,7 @@
 }
 
 .todo__item--done {
-  background-color: #0fe;
+  background-image: linear-gradient(25deg, #02fdb6bf 0%, #02f1fdba 100%);
 }
 .todo__item--done .todo__text {
   opacity: 0.5;
